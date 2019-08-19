@@ -2,18 +2,18 @@
 slug: contact
 title: Contact Me
 ---
-As soon as I could receive your messages, I will respond immediately.
+As soon as I could receive your messages, I would respond immediately.
 
-> <i class="fa fa-envelope "></i> 
-  <u>pengwhong1995@163.com</u> or <u>pengwhong@gmail.com</u>
++ <i class="fa fa-envelope "></i> 
+  <pengwhong1995@163.com> or <pengwhong@gmail.com>
   
-> <i class="fa fa-github "></i>
++ <i class="fa fa-github "></i>
   [HankPPeng](https://github.com/HankPPeng)
  
-> <i class="fa fa-twitter "></i>
++ <i class="fa fa-twitter "></i>
   [WeihongPPeng](https://twitter.com/WeihongPPeng)
   
-> <i class="fa fa-weixin "></i>
++ <i class="fa fa-weixin "></i>
   [Buyi.Wh](https://github.com/HankPPeng/HankPPeng.github.io/blob/master/My%20Wechat%20QR%20code.jpg?raw=true)
 
 

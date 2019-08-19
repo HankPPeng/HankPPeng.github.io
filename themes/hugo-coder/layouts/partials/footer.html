@@ -3,14 +3,10 @@
     {{ with .Site.Params.footercontent | safeHTML }}
       <p>{{.}}</p>
     {{ end }}
-    {{ if not .Site.Params.hideCopyright }} © {{ now.Format "2006" }}{{ end }}
+    {{ if not .Site.Params.hideCopyright }} © 2019-2020 {{ end }}
     {{ if not .Site.Params.hideCredits }}
       {{ if not .Site.Params.hideCopyright }} · {{ end }}
       {{ i18n "powered_by" }} <a href="https://bookdown.org/yihui/blogdown/">blogdown</a> using <a href="https://github.com/luizdepra/hugo-coder/">Coder</a> for <a href="https://gohugo.io/">Hugo</a>.
-    {{ end }}
-    {{ if .Site.Params.commit }}
-      {{ if or (not .Site.Params.hideCredits) (not .Site.Params.hideCopyright) }}  {{ end }}
-      [<a href="{{ .Site.Params.commit }}{{ getenv "GIT_COMMIT_SHA" }}">{{ getenv "GIT_COMMIT_SHA_SHORT" }}</a>]
     {{ end }}
   </section>
 </footer>
