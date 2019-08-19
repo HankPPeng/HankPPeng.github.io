@@ -19,9 +19,9 @@ disqusShortname = "yourdiscussshortname"
     author = "Hank Peng"
     description = "Hank Peng's personal website"
     keywords = "blog,developer,personal"
-    info = "Full Stack DevOps and Magician"
-    avatarurl = "images/avatar.jpg"
-    footercontent = "Enter a text here."
+    info = "Always believe that life is full of beauty."
+    avatarurl = "images/avatar2.jpg"
+    footercontent = "Run, until you touch the wind."
 
     dateformat = "January 2, 2006"
 
@@ -64,7 +64,7 @@ disqusShortname = "yourdiscussshortname"
     name = "Wechat"
     icon = "fab fa-weixin"
     weight = 3
-    url = "https://www.linkedin.com/in/johndoe/"
+    url = "https://github.com/HankPPeng/HankPPeng.github.io/blob/master/My%20Wechat%20QR%20code.jpg?raw=true"
 
 
 [languages]
@@ -78,12 +78,12 @@ disqusShortname = "yourdiscussshortname"
 
         [[languages.en.menu.main]]
         name = "Blog"
-        weight = 2
+        weight = 3
         url = "posts/"
 
         [[languages.en.menu.main]]
         name = "Projects"
-        weight = 3
+        weight = 2
         url = "projects/"
 
         [[languages.en.menu.main]]
