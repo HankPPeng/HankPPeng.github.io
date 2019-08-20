@@ -55,12 +55,14 @@ series: []
 ```
 
 * 目录：
+
 ```
 \tableofcontents
 (调用正文中的章节形成目录)
 ```
 
 * 章节：
+
 ```
 \chapter{}
       contents;
@@ -72,6 +74,7 @@ series: []
 * 插图
 
        &emsp;需要在导言区添加宏包 `\usepackage{graphicx}` 和 `\usepackage{float}` 以使得能够插入图片和浮动图片。
+       
 ```
 \begin{figure}[ht]
       \centering
@@ -84,6 +87,7 @@ series: []
 * 表格
       
       &emsp;表格需要添加宏包 `\usepackage{multirow}`。但表格手动输入代码太麻烦了，不过主体内容可以在[网站](http://www.tablesgenerator.com/)上编辑好后复制粘贴。
+      
 ```
 \begin{table}[H]
       \caption{the title of the table}
@@ -98,18 +102,20 @@ series: []
 * 公式
 
       &emsp;公式编辑是LATEX的一大特色，不过比较复杂，这里添加一些常用的命令。需要在导言区添加宏包 `\usepackage{amsmath}` 和 `\usepackage{amssymb}`。
+      
 ```
 \begin{equation}
      \label{the label of the equation}
-
 \end{equation}
 ```
+
       &emsp;这里说明一些命令：
       * 单个方程： 在 `{}` 填写 `equation` 表公式后带上编号； `equation*` 表不带上编号。
       * 多个方程：这其中由两种方式，一种是每一条公式居中显示，一种是每条公式按照特定的字符对齐显示，如头字符或者‘=’，‘+’号。
         * 每条公式居中显示：使用 `gather` 和 `gather*`。
         * 每条公式对齐显示：使用 `align` 和 `align*`。
         * 不过这里需要留意，多行公式默认每个公式进行编号，举个例子：
+        
         ```
         \begin{align}
               a + b &= c \notag 
@@ -117,7 +123,8 @@ series: []
               g + h &= i 
         \end{align}
         ```
-          &emsp;上面的 `&`是关系符，各公式按照 `=` 对齐； `\notag` 表示编译时候不添加编号，即第一条公式无编号，后面两条公式有编号； `\\` 表示换行，上面的第一条公式与第二条公式是在同一行的，第三条公式在第二行。
+        
+             &emsp;上面的 `&`是关系符，各公式按照 `=` 对齐； `\notag` 表示编译时候不添加编号，即第一条公式无编号，后面两条公式有编号； `\\` 表示换行，上面的第一条公式与第二条公式是在同一行的，第三条公式在第二行。
           
 * 参考文献
 
@@ -128,12 +135,14 @@ series: []
 * 一些常用的命令
       
       * `\ref{labelname}` : 这个命令可以用来引用‘编号’，如‘第一章’的‘一’；前面的图和表格都有 `\label{}` 命令，`\label{}`也可以为‘第一章’进行标签：
+      
       ```
       \chapter{firstchaptername}
       \label{fircha}
       
       这是第\ref{fircha}章。
       ```
+      
         &emsp;上面显示的结果是 `这是第一章`，其实就是交叉引用。
       
       * `\eqref{eqlabelname}`，是特定引用公式的标号，引用后会显示 `式（1）`；若使用 `\ref{}` 则会显示 `式1`。
