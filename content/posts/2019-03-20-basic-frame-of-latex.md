@@ -21,12 +21,12 @@ series: []
   * 如建立一个新的角度命令：`\newcommand\degree{^\circ}` ，这样就能用 `\degree` 来表示 `^\circ`了。
 
   * 如建立一个新的引用环境：
-      
+  
       ```
       \newenviroment{myquote} 
       {\begin{quote}\kaishu\zihao{5}} 
       {\end{quote}}
-      ```                
+      ```
       
       &emsp;这样就建立了一个 `myquote` 的新环境，可以使用 `quote` 的同时还对字体等格式进行修改。
 
