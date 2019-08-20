@@ -2,10 +2,14 @@
 slug: about
 title: About Me
 ---
-You can call me:
+<div style=float:right>
+  <img src="https://github.com/HankPPeng/HankPeng.com/blob/master/images/my%20photo.jpg?raw=true" height=410px width=295px >
+</div>
 
-**Weihong Peng** (My Chinese name) or
-**Hank Peng** (My English name).
+Welcome!! You can call me:
+
+**Weihong Peng** (my Chinese name) or
+**Hank Peng** (my English name).
 
 Whatever you call, are me.
 
@@ -19,7 +23,7 @@ and [Chinese version]().
 
 Something you might be interested:
 
-+ My research topic is 
+* My research topic is 
 
 
 
