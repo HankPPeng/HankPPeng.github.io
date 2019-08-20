@@ -3,7 +3,7 @@ slug: about
 title: About Me
 ---
 <div style=float:right>
-  <img src="https://github.com/HankPPeng/HankPeng.com/blob/master/images/my%20photo.jpg?raw=true" height=410px width=295px >
+  <img src="https://github.com/HankPPeng/HankPeng.com/blob/master/images/my%20photo.jpg?raw=true" height=324px width=240px >
 </div>
 
 Welcome!! You can call me:

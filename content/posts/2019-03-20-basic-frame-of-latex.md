@@ -22,13 +22,13 @@ series: []
 
   * 如建立一个新的引用环境：
   
-  ```
-  \newenviroment{myquote} 
-  {\begin{quote}\kaishu\zihao{5}} 
-  {\end{quote}}
-  ```
-  
-&emsp;这样就建立了一个 `myquote` 的新环境，可以使用 `quote` 的同时还对字体等格式进行修改。
+      ```
+      \newenviroment{myquote} 
+      {\begin{quote}\kaishu\zihao{5}} 
+      {\end{quote}}
+      ```
+      
+        这样就建立了一个 `myquote` 的新环境，可以使用 `quote` 的同时还对字体等格式进行修改。
 
 * 在这里对封面进行编辑：
 
@@ -40,9 +40,9 @@ series: []
 &emsp;这里所指的正文是除了封面以外所有的页面，其中包括目录、摘要、正文和参考文献等页面。这些页面包括在
 
 ```
-  \begin{documnet}
+\begin{documnet}
   
-  \end{documnet}
+\end{documnet}
 ```  
 
 之中。
@@ -51,32 +51,32 @@ series: []
 
 * 摘要： 
 
-```
+    ```
 \begin{abstract}
 
 \end{abstract}
-```
+    ```
 
 * 目录：
 
-```
-\tableofcontents
-(调用正文中的章节形成目录)
-```
+    ```
+    \tableofcontents
+    (调用正文中的章节形成目录)
+    ```
 
 * 章节：
 
-```
-\chapter{}
-      contents;
-\section{}
-      contents;
-(可以说这里就开始是正文)
-```
+    ```
+    \chapter{}
+        contents;
+    \section{}
+        contents;
+    (可以说这里就开始是正文)
+    ```
 
 * 插图
 
-       &emsp;需要在导言区添加宏包 `\usepackage{graphicx}` 和 `\usepackage{float}` 以使得能够插入图片和浮动图片。
+&emsp;需要在导言区添加宏包 `\usepackage{graphicx}` 和 `\usepackage{float}` 以使得能够插入图片和浮动图片。
        
 ```
 \begin{figure}[ht]
@@ -89,7 +89,7 @@ series: []
 
 * 表格
       
-      &emsp;表格需要添加宏包 `\usepackage{multirow}`。但表格手动输入代码太麻烦了，不过主体内容可以在[网站](http://www.tablesgenerator.com/)上编辑好后复制粘贴。
+&emsp;表格需要添加宏包 `\usepackage{multirow}`。但表格手动输入代码太麻烦了，不过主体内容可以在[网站](http://www.tablesgenerator.com/)上编辑好后复制粘贴。
       
 ```
 \begin{table}[H]
@@ -104,7 +104,7 @@ series: []
 
 * 公式
 
-      &emsp;公式编辑是LATEX的一大特色，不过比较复杂，这里添加一些常用的命令。需要在导言区添加宏包 `\usepackage{amsmath}` 和 `\usepackage{amssymb}`。
+&emsp;公式编辑是LATEX的一大特色，不过比较复杂，这里添加一些常用的命令。需要在导言区添加宏包 `\usepackage{amsmath}` 和 `\usepackage{amssymb}`。
       
 ```
 \begin{equation}
@@ -131,26 +131,26 @@ series: []
               g + h &= i 
         \end{align}
         ```
-上面的 `&`是关系符，各公式按照 `=` 对齐； `\notag` 表示编译时候不添加编号，即第一条公式无编号，后面两条公式有编号； `\\` 表示换行，上面的第一条公式与第二条公式是在同一行的，第三条公式在第二行。
+        
+        &emsp;上面的 `&`是关系符，各公式按照 `=` 对齐； `\notag` 表示编译时候不添加编号，即第一条公式无编号，后面两条公式有编号； `\\` 表示换行，上面的第一条公式与第二条公式是在同一行的，第三条公式在第二行。
           
 * 参考文献
 
-      在导言区添加 `\bibliographystyle{}` 表示参考文献的格式。在正文末尾添加 `\bibliography{conference}` ，表示调用 `conference.bib` 文件。
+&emsp;在导言区添加 `\bibliographystyle{}` 表示参考文献的格式。在正文末尾添加 `\bibliography{conference}` ，表示调用 `conference.bib` 文件。
       
-      在需要添加引用的地方后使用命令 `\cite{bibtexkey}`，当需要引用多个文献时可 `\cite{bibtexkey1,bibtexkey2}`。
+&emsp;在需要添加引用的地方后使用命令 `\cite{bibtexkey}`，当需要引用多个文献时可 `\cite{bibtexkey1,bibtexkey2}`。
       
 * 一些常用的命令
       
       * `\ref{labelname}` : 这个命令可以用来引用‘编号’，如‘第一章’的‘一’；前面的图和表格都有 `\label{}` 命令，`\label{}`也可以为‘第一章’进行标签：
       
-      ```
-      \chapter{firstchaptername}
-      \label{fircha}
+          ```
+          \chapter{firstchaptername}
+          \label{fircha}
+          这是第\ref{fircha}章。
+         ```
       
-      这是第\ref{fircha}章。
-      ```
-      
-      上面显示的结果是 `这是第一章`，其实就是交叉引用。
+        &emsp;上面显示的结果是 `这是第一章`，其实就是交叉引用。
       
       * `\eqref{eqlabelname}`，是特定引用公式的标号，引用后会显示 `式（1）`；若使用 `\ref{}` 则会显示 `式1`。
       
