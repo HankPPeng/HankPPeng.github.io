@@ -19,7 +19,7 @@ I am a M.D. candidate from <u>[School of Electromechanical Engineering](http://j
 Also, I received B.D. in mechanical manufacturing and automation, 2014, from <u>[China University of Petroleum](http://www.upc.edu.cn/)</u>, Qingdao, China.
 
 You can find my CV here, [English version]() 
-and [Chinese version]().
+and [Chinese version](https://github.com/HankPPeng/HankPeng.com/blob/master/images/My%20CV.pdf).
 
 Something you might be interested:
 
