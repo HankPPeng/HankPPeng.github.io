@@ -6,7 +6,7 @@ title: About Me
   <img src="https://github.com/HankPPeng/HankPeng.com/blob/master/images/my%20photo.jpg?raw=true" height=324px width=240px >
 </div>
 
-Welcome!! You can call me:
+Welcome! You can call me:
 
 **Weihong Peng** (my Chinese name) or
 **Hank Peng** (my English name).
@@ -27,7 +27,7 @@ Something you might be interested:
 
 * I learned Matlab and Python to do my research, and I knew about R much.
 
-* I've been using LATEX for 1 year, but I would combine MS Word with LATEX to write my thesis.
+* I've been using LATEX for 1 year, but I would combine LATEX with MS Word to write my thesis.
 
 * I love eating food, only delicious food! My way to relieve stress is rope skipping.
 
