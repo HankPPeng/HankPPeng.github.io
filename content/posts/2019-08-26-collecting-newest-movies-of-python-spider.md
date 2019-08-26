@@ -78,20 +78,29 @@ import os
 
 
 def get_newm(url):
-    r = requests.get(url)
-    r.encoding = 'gb2312'
-    html = etree.HTML(r.text)
-    infos = html.xpath('//div[@class="co_content8"]/ul//table')
-    for info in infos:
-        movie_name = info.xpath('tr[2]/td[2]/b/a/@title')
-        movie_date_text = info.xpath('tr[3]/td[2]/font/text()')
-        movie_date = re.findall('日期：(.*) ',movie_date_text[0])
-        print(movie_date, movie_name)
+    for page in range(1,6):
+        if page == 1:
+            pageurl = url
+        else:
+            pageurl = 'https://www.dy2018.com/html/gndy/dyzz/index_' + str(page) + '.html'
+        try:
+            r = requests.get(pageurl)
+            r.raise_for_status()
+            r.encoding = 'gb2312'
+            html = etree.HTML(r.text)
+            infos = html.xpath('//div[@class="co_content8"]/ul//table')
+            print("\nThis is the Page %d." %page)
+            for info in infos:
+                movie_name = info.xpath('tr[2]/td[2]/b/a/@title')
+                movie_date_text = info.xpath('tr[3]/td[2]/font/text()')
+                movie_date = re.findall('日期：(.*) ',movie_date_text[0])
+                print(movie_date, movie_name)
+        except:
+            print('\nTry Later.\n')
 
 
 if __name__ == '__main__':
 
     get_newm('https://www.dy2018.com/html/gndy/dyzz/index.html')
-    print('\nAll Done!\n')
     os.system("pause")
 ```
