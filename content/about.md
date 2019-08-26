@@ -8,8 +8,7 @@ title: About Me
 
 Welcome! You can call me:
 
-**Weihong Peng** (my Chinese name) or
-**Hank Peng** (my English name).
+**Weihong Peng** or **Hank Peng**.
 
 Whatever you call, are me.
 
