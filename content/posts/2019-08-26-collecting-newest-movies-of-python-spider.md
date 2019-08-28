@@ -31,7 +31,7 @@ from email.mime.multipart import MIMEMultipart
 
 #抓取电影数据
 def get_newm(url):
-    for page in range(1,6):
+    for page in range(6):
         if page == 1:
             pageurl = url
         else:
@@ -52,6 +52,7 @@ def get_newm(url):
             print('Collecting successfully on Page %d.\n' %page)
         except:
             print('Try Later.\n')
+    fp.close()
     if r.status_code == 200:
         send_mail()
     else:
