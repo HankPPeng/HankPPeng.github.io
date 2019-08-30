@@ -19,9 +19,9 @@ disqusShortname = "hank-peng"
     author = "Hank Peng"
     description = "Hank Peng's personal website"
     keywords = "blog,developer,personal"
-    info = "Always believe that life is full of beauty."
+    info = "Try not to become a man of success. Rather become a man of value. —Albert Einstein"
     avatarurl = "images/avatar2.jpg"
-    footercontent = "If you can't explain it to a six year old, you don't understand it yourself. —Albert Einstein"
+    footercontent = "Always believe that life is full of beauty."
 
     dateformat = "January 2, 2006"
 
