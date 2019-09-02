@@ -12,9 +12,9 @@ series: []
 ---
 &emsp;最近重温Python的内容，在我实际的应用中，用的比较多的是 `import...` 和 `def ...`，在记住一些基本的语法规则以后就可以在一些场合比较好地使用Python。近日也突发奇想，用爬虫来抓取某网站的电影数据，之后将数据推送到自己的设备上面，虽然现在也存在着一些App能够做到这种功能，不过自定义程度不够高，希望学习一下能够满足自己的小小愿望。
 
-&emsp;经过自己尝试编写简单的Pyhton-Spider发现，经常用到的需要进行学习的有以下三项：正则表达式`re`，请求`requests`，规范超文本语句`lxml`。以上三项都是Python中的库，能够调取使用，在这里稍稍地整理一下，以防日后忘记用法。
+&emsp;经过自己尝试编写简单的Pyhton-Spider发现，经常用到的需要进行学习的有以下三项：正则表达式`re`，请求`requests`，调用超文本语句`lxml`。以上三项都是Python中的库，能够调取使用，在这里稍稍地整理一下，以防日后忘记用法。
 
-* 正则表达式`re`
+1.正则表达式`re`
 
 &emsp;接触到了正则表达式之后才发现自己以前都太不懂搜索了，正则表达式就是通过一连串繁琐的字符（当然也可以很简单）来匹配文本，这会想起Word里边的‘查找与替换’，不过，以前我都是输入一个特定的字符然后进行另外一个字符的替换，这放在短文本里边是完全没有问题的，与其输入繁琐的正则表达式，倒不如输入特定的字符。可是，自己写爬虫的时候，用正则表达式提取数据就非常高效了，怎么高效只有自己知道，下面解释一个典型正则表达式的意思：
 
@@ -94,7 +94,7 @@ series: []
           * `re.U`：根据Unicode字符集解析字符。这个标志影响 `\w, \W, \b, \B`；
           * `re.X`：该标志通过给予你更灵活的格式以便你将正则表达式写得更易于理解。
           
-* 请求`requests`
+2.请求`requests`
 
 &emsp;`requests`库是Python的第三方库，对于`scrapy`与`requests`之间，`requests`入门容易，自定义程度更高；`scrapy`是一个爬虫框架，需要进行调用各种命令，但更强大，应用更广泛。这里先对`requests`库进行一些整理，之后有时间再去研究一下`scrapy`，然后记录下来。
 
@@ -111,3 +111,47 @@ series: []
 * 请求头：`r.request.headers`，这个命令查看本地发送给服务器的头部信息；而`r.headers`是响应头，是服务器响应发送给本地的头部信息。根据上面的描述，更改头部信息`headers`可以更改为浏览器或者用户信息，如`headerschange = {'user-agent':'Mozilla/5.0'}`。
 
 * 返回信息：`r.text`，这个命令可以抓取网站的包括html格式在内的信息，然而怎么提取有用的信息则需要对这些内容进行排版分析。`r.content`返回网页的二进制内容。`r.json()`返回`json`格式的内容。
+
+3.提取`lxml`和`bs4`
+
+&emsp;`lxml`是Python的一个解析库，支持HTML和XML的解析，并且支持XPath的解析，在Python开头需要导入`from lxml import etree`；同时经常会提到的另外一个库是`BeautifulSoup`库，导入格式为`from bs4 import BeautifulSoup`，这个库也可以提取，但个人更喜欢`lxml`库来提取信息，因为XPath这种调取方式让人着迷。
+
+a. `lxml`
+
+  * 解析方法：`html = etree.HTML(r.text)`，这个命令运用HTML解析器对所获得的网页内容进行HTML解析，利用`fhtml = etree.tostring(html)`可以补全`html`的结果（html标签）。
+  
+  * XPath：XPath可以定位一个你想要得到的信息的位置，如获取某个标题，可以利用`title = html.xpath('//*[@id="content"]/span/p[1]/@title')`来提取‘title’的信息。下面对XPath的语法进行总结：
+    * 表达式：
+    
+      * `nodename`：选取此节点的所有子节点。
+      * `/`：从根节点选取，也就是从第一层目录选取。
+      * `//`：从匹配选择的当前节点选择文档中的节点，而不考虑它们的位置。（不用一层一层寻找）
+      * `@`：选取属性。
+      * `[]`：里面填写数字，表示元素的位置。
+      
+    &emsp;举个例子：
+  
+```
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<bookstore class="store">
+
+<book>
+  <title lang="eng">Harry Potter</title>
+  <price>29.99</price>
+</book>
+
+<book>
+  <title lang="eng">Learning XML</title>
+  <price>39.95</price>
+</book>
+
+</bookstore>
+```
+
+&emsp;选取节点：选取‘book’的第一个‘title’--‘Harry Potter’：`title = html.xpath('//bookstore[@class="store"]/book[1]/title/text()')`。这样就能提取‘Harry Potter’的文本，其实还有更简单的写法，如`title = html.xpath('//bookstore/book[1]/@title')`，不过一般不省略`id`名，因为`id`名在html中只能唯一，所以能够很好地辨识功能。
+  
+
+b. `bs4`
+
+  * 解析方法：`soup = BeautifulSoup(r.text, 'lxml')`

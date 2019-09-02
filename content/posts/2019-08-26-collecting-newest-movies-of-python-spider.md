@@ -29,9 +29,9 @@ from email.header import Header
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
-#抓取电影数据
+#抓取5页电影数据
 def get_newm(url):
-    for page in range(6):
+    for page in range(1,6):
         if page == 1:
             pageurl = url
         else:
@@ -42,7 +42,7 @@ def get_newm(url):
             r.encoding = 'gb2312'
             html = etree.HTML(r.text)
             infos = html.xpath('//div[@class="co_content8"]/ul//table')
-            print("\nThis is the Page %d." %page)
+            print("This is the Page %d." %page)
             for info in infos:
                 movie_name = info.xpath('tr[2]/td[2]/b/a/@title')
                 movie_date_text = info.xpath('tr[3]/td[2]/font/text()')
@@ -51,7 +51,7 @@ def get_newm(url):
                 writer.writerow((page, movie_date, movie_name))
             print('Collecting successfully on Page %d.\n' %page)
         except:
-            print('Try Later.\n')
+            print('Failed on Page %d. Try Later.\n' %page)
     fp.close()
     if r.status_code == 200:
         send_mail()
