@@ -24,7 +24,8 @@ series: []
 
 &emsp;这个表达式我看解释的时候就觉得：嗯，原来就是这么回事啊。啃了教程之后回头看，自己写出来可不容易啊...Ok，这个表达式的意思是（我将它进行拆分）：
 
-  * `\(?`表出现0次或1次；`0`匹配0；
+  * `\(?`表出现0次或1次；
+  * `0`匹配0；
   * `\d{2}`表出现两个随机数字（0-9）；
   * `[) -]?`表`)`，`空格`，`-`中任意一个字符出现0次或1次；
   * `\d{8}`表出现8个随机数字。
@@ -83,7 +84,7 @@ series: []
       * `re.search(pattern, string, flags)`：这个语句相对于`re.match()`来说无需开头一致，查找整个文本或字符串。它们之间的区别在于：`re.match`只匹配字符串的开始，如果字符串开始不符合正则表达式，则匹配失败，函数返回`None`；而`re.search`匹配整个字符串，直到找到一个匹配。
       * `re.sub(pattern, repl, string, count=0, flags=0)`：`repl`是替换的字符串，也可为一个函数；`count`是模式匹配后替换的最大次数，默认 0 表示替换所有的匹配。
       * `re.compile(pattern, flags)`：`pattern`是一个字符串形式的正则表达式。生成一个正则表达式对象，能够供`re.match`和`re.research`调取使用，最大的好处是能够指定要匹配字符串的位置进行匹配。
-      * `re.findall(pattern, string, pos, endpos)`：`pos`是可选参数，指定字符串的起始位置，默认为 0;`endpos`是可选参数，指定字符串的结束位置，默认为字符串的长度。这语句是匹配字符串中所有的正则表达式，而`match`和`search`匹配一次后不再匹配。
+      * `re.findall(pattern, string, pos, endpos)`：`pos`是可选参数，指定字符串的起始位置，默认为 0；`endpos`是可选参数，指定字符串的结束位置，默认为字符串的长度。这语句是匹配字符串中所有的正则表达式，而`match`和`search`匹配一次后不再匹配。
       * `re.finditer(pattern, string, flags=0)`：表示在字符串中找到正则表达式所匹配的所有子串，并把它们作为一个迭代器返回。
       * `re.split(pattern, string, maxsplit=0, flags=0)`：`maxsplit`是分割次数，`maxsplit=1`为分割一次，默认为0不限次数。这个语句按照匹配的子串将字符串分割后返回列表。
       * `flags`：
@@ -121,6 +122,7 @@ a. `lxml`
   * 解析方法：`html = etree.HTML(r.text)`，这个命令运用HTML解析器对所获得的网页内容进行HTML解析，利用`fhtml = etree.tostring(html)`可以补全`html`的结果（html标签）。
   
   * XPath：XPath可以定位一个你想要得到的信息的位置，如获取某个标题，可以利用`title = html.xpath('//*[@id="content"]/span/p[1]/@title')`来提取‘title’的信息。下面对XPath的语法进行总结：
+    
     * 表达式：
     
       * `nodename`：选取此节点的所有子节点。
@@ -154,4 +156,10 @@ a. `lxml`
 
 b. `bs4`
 
-  * 解析方法：`soup = BeautifulSoup(r.text, 'lxml')`
+  * 解析方法：`soup = BeautifulSoup(r.text, 'lxml[html.parser]')`
+  
+  * 查找信息： `soup.select(" "[path])`，一般使用CSS选择器来选择需要获得信息的路径；在规划好信息路径之后，利用`find_all( )`来查找子节点。
+  
+  * 获取文本：`soup.get_text()`，获取‘tag’中的文本内容。
+  
+&emsp;9.3填坑完毕，有新想法再添加。哈哈~ (ㄏ￣▽￣)ㄏ
