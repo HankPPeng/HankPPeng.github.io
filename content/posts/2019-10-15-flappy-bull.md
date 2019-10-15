@@ -10,9 +10,9 @@ description: ''
 externalLink: ''
 series: []
 ---
-emsp;网上冲浪的时候，偶尔发现Pyhton的一个开源包‘pyganme’，使用方法也比较简单，参考一下[介绍文档](https://github.com/pygame/pygame)后遂自己写了个‘flappy bull’的代码，哈哈，没错，就是‘flappy bull’！！
+&emsp;网上冲浪的时候，偶尔发现Pyhton的一个开源包‘pyganme’，使用方法也比较简单，参考一下[介绍文档](https://github.com/pygame/pygame)后遂自己写了个‘flappy bull’的代码，哈哈，没错，就是‘flappy bull’！！
 
-emsp;win下通过命令行`pip install pygame`安装源包，之后导言区就导入`import play`即可应用。
+&emsp;win下通过命令行`pip install pygame`安装源包，之后导言区就导入`import play`即可应用。
 
 参考了一些帖子，源代码如下（可[下载](https://raw.githubusercontent.com/HankPPeng/HankPeng.com/master/images/flappy_bull.7z)）：
 
@@ -85,6 +85,8 @@ async def block():
 
 play.start_program()
 ```
-emsp;运行之后键盘的上方向键即可让‘bull’动起来，碰到柱子就会变成红色。当然，参考以往火热的‘flappy bird’的话就需要添加更多的功能，如分数统计和死亡重新开始等，这些有时间再实现。
+&emsp;运行之后键盘的上方向键即可让‘bull’动起来，碰到柱子就会变成红色。当然，参考以往火热的‘flappy bird’的话就需要添加更多的功能，如分数统计和死亡重新开始等，这些有时间再实现。
 
-![flappy bull](https://raw.githubusercontent.com/HankPPeng/HankPeng.com/master/images/flappy_bull.png)
+<div align="center">
+!(https://raw.githubusercontent.com/HankPPeng/HankPeng.com/master/images/flappy_bull.png)flappy bull
+</div>
