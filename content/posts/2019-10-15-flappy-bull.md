@@ -87,6 +87,6 @@ play.start_program()
 ```
 &emsp;运行之后键盘的上方向键即可让‘bull’动起来，碰到柱子就会变成红色。当然，参考以往火热的‘flappy bird’的话就需要添加更多的功能，如分数统计和死亡重新开始等，这些有时间再实现。
 
-<div align=center>
-![flappy bull](https://raw.githubusercontent.com/HankPPeng/HankPeng.com/master/images/flappy_bull.png) 
-flappy bull</div>
+<div style="text-align: center">
+<img src="https://raw.githubusercontent.com/HankPPeng/HankPeng.com/master/images/flappy_bull.png">
+</div>
