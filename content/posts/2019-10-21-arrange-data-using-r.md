@@ -1,5 +1,5 @@
 ---
-title: arrange data using R
+title: Arrange data using R
 author: ''
 date: '2019-10-21'
 slug: arrange-data-using-r
