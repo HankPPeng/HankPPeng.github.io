@@ -32,6 +32,6 @@ Something you might be interested:
 
 * This line will make the website looks better.&ensp;(๑•̀ㅂ•́)و✧
 
-If you have any questions, please contact me, you can find my [contact information](https://hankpeng.netlify.com/contact/) in this website.
+If you have any questions, please get in touch with me, you can find my [contact information](https://hankpeng.netlify.com/contact/) here.
 
 Thanks for reading!&ensp; o(\*￣▽￣*)o
