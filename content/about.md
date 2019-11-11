@@ -2,17 +2,17 @@
 slug: about
 title: About Me
 ---
-<div style=float:right>
-  <img src="https://github.com/HankPPeng/HankPeng.com/blob/master/images/my%20photo.jpg?raw=true" height=324px width=240px >
-</div>
+# <div style=float:right>
+#   <img src="https://github.com/HankPPeng/HankPeng.com/blob/master/images/my%20photo.jpg?raw=true" height=324px width=240px >
+# </div>
 
 Welcome! You can call me:
 
 **Weihong Peng** or **Hank Peng**.
 
-Whatever you call, are me.
+Whatever you call, is me.
 
-I am a M.D. candidate from [School of Electromechanical Engineering](http://jdgcxy.gdut.edu.cn/), 
+I am a M.E. candidate from [School of Electromechanical Engineering](http://jdgcxy.gdut.edu.cn/), 
 [Guangdong University of Technology](http://www.gdut.edu.cn/), Guangzhou, China.
 
 Also, I received B.D. in mechanical manufacturing and automation, 2014, from [China University of Petroleum](http://www.upc.edu.cn/), Qingdao, China.
@@ -26,7 +26,7 @@ Something you might be interested:
 
 * I learned Matlab and Python to do my research, and I knew about R much.
 
-* I've been using LATEX for 1 year, but I would combine LATEX with MS Word to write my thesis.
+* I've been using LATEX for 2 year, but I would combine LATEX with MS Word to write my thesis.
 
 * I love eating food, only delicious food! My way to relieve stress is rope skipping.
 

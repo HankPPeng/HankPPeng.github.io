@@ -14,7 +14,7 @@ As soon as I could receive your messages, I would respond immediately.
   &thinsp;[WeihongPPeng](https://twitter.com/WeihongPPeng)
   
 + <i class="fa fa-weixin "></i>
-  &thinsp;[Buyi.Wh](https://github.com/HankPPeng/HankPeng.com/blob/master/images/My%20Wechat%20QR%20code.jpg?raw=true)
+  &thinsp;[Buyi.Wh](https://raw.githubusercontent.com/HankPPeng/HankPeng.com/master/images/My_Wechat_QR_code.jpg)
 
 
 
