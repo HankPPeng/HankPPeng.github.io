@@ -4,7 +4,7 @@ title: About Me
 ---
 <!---
   <div style=float:right> <img
-  src="https://raw.githubusercontent.com/HankPPeng/HankPeng.com/master/images/my%20photo.jpg"
+  src="https://raw.githubusercontent.com/HankPPeng/HankPeng.com/master/images/my_photo.jpg"
   height=324px width=240px > </div>
 -->
 
@@ -28,7 +28,7 @@ Something you might be interested:
 
 * I learned Matlab and Python to do my research, and I knew about R much.
 
-* I've been using LATEX for 2 year, but I would combine LATEX with MS Word to write my thesis.
+* I've been using LATEX for 2 years, but I would combine LATEX with MS Word to write my thesis.
 
 * I love eating food, only delicious food! My way to relieve stress is rope skipping.
 
