@@ -33,6 +33,6 @@ Something you might be interested:
 
 * This line will make the website looks better.&ensp;(๑•̀ㅂ•́)و✧
 
-If you have any questions, please get in touch with me, you can find my [contact information](https://hankpeng.netlify.com/contact/) here.
+If you have any questions, please get in touch with me. You can find my [contact information](https://hankpeng.netlify.com/contact/) here.
 
 Thanks for reading!&ensp; o(\*￣▽￣*)o
