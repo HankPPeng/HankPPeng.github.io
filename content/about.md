@@ -19,7 +19,7 @@ I am a M.E. candidate from [School of Electromechanical Engineering](http://jdgc
 
 Also, I received B.D. in mechanical manufacturing and automation, 2014, from [China University of Petroleum](http://www.upc.edu.cn/), Qingdao, China.
 
-You can find my CV here, [English version]() and [Chinese version](https://hankpeng.netlify.com/resume_zh.pdf).
+You can find my CV here, [English version](https://hankpeng.netlify.com/resume_en.pdf) and [Chinese version](https://hankpeng.netlify.com/resume_zh.pdf).
 
 Something you might be interested:
 
